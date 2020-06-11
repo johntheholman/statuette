@@ -39,7 +39,7 @@ I have been using various methods throughout the years to compile an Oscar relat
 ### Planned Additions:
 1. Navigation options to quickly jump from one category to another
 2. The ability to update each category on the reviews page to make sure you are comfortable with your choice, or to change it last minute
-
+3. Update to reduce the need for PHPMailer (if possible)
 ---
 
 ## Instructions for setting up the project locally:
