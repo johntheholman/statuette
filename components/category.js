@@ -17,7 +17,6 @@ class Category {
 		this.categoryCallback(this);
     	$(".page-content").empty();
     	$("#nextCategory").empty();
-		window.scrollTo(0, 0);
 		var categoryIndex = parseInt(button.currentTarget.name);
     	if (categoryIndex < 22) {
 	    	categoryIndex++;
@@ -43,7 +42,8 @@ class Category {
 	        }
 	        statuetteGame.displayCategory(categoryTitle);
 	        var nominees = new Nominees (this.response, this.categoryArray[index], this.selectNominee);
-	        nominees.getNominees();
+	        window.scrollTo(0, 0);
+			nominees.getNominees();
 	        this.footerButton(index);
 	    }
 	}
