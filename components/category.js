@@ -17,6 +17,7 @@ class Category {
 		this.categoryCallback(this);
     	$(".page-content").empty();
     	$("#nextCategory").empty();
+		window.scrollTo(0, 0);
 		var categoryIndex = parseInt(button.currentTarget.name);
     	if (categoryIndex < 22) {
 	    	categoryIndex++;
