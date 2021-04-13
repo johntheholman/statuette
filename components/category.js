@@ -42,10 +42,10 @@ class Category {
 	        }
 	        statuetteGame.displayCategory(categoryTitle);
 	        var nominees = new Nominees (this.response, this.categoryArray[index], this.selectNominee);
-	        window.scrollTo(0, 0);
 			nominees.getNominees();
 	        this.footerButton(index);
 	    }
+		$(window).scrollTop(0);
 	}
 
 	footerButton(index){
