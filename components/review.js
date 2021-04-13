@@ -22,7 +22,7 @@ class Review {
 		var formDiv = $('<ul id="sortable">').addClass("player-picks mdl-list");
 		$("#review-form").append(formDiv);
 		var confidenceList = $("<ul>").addClass("confidence-list");
-		for(var listIndex = 24; listIndex > 0; listIndex--){
+		for(var listIndex = 23; listIndex > 0; listIndex--){
 				var confidencelistItem = $("<li>").text(listIndex);
 				confidencelistItem.appendTo(confidenceList);
 		}
