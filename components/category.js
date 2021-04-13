@@ -18,16 +18,16 @@ class Category {
     	$(".page-content").empty();
     	$("#nextCategory").empty();
 		var categoryIndex = parseInt(button.currentTarget.name);
-    	if (categoryIndex < 23) {
+    	if (categoryIndex < 22) {
 	    	categoryIndex++;
 	    	this.getCategory(categoryIndex);
-	    } else if (categoryIndex === 23) {
+	    } else if (categoryIndex === 22) {
 	    	this.confidencePage();
-	    } else if (categoryIndex === 24) {
+	    } else if (categoryIndex === 23) {
 	    	$("#reviewPicks").empty();
 	    	categoryIndex++;
 	    	this.reviewPage(categoryIndex);
-	    } else if (categoryIndex === 25) {
+	    } else if (categoryIndex === 24) {
 	    	this.submitAnswers();
 	    }
     }
@@ -48,15 +48,15 @@ class Category {
 	}
 
 	footerButton(index){
-		if (index < 23) {
+		if (index < 22) {
 			var footerRaisedButton = $('<button type="button" name="'+index+'" id="nextCategoryButton">').addClass("start- mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent").text("Next Category").click(this.handleCategory);
 			$("#nextCategory").append(footerRaisedButton);
 			document.getElementById("nextCategoryButton").setAttribute("disabled", true);
-		} else if (index === 23){
+		} else if (index === 22){
 			var reviewRaisedButton = $('<button type="button" name="'+index+'" id="nextCategoryButton">').addClass("start- mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent").text("Review Picks").click(this.handleCategory);
 			$("#reviewPicks").append(reviewRaisedButton);
 			document.getElementById("nextCategoryButton").setAttribute("disabled", true);
-		} else if (index === 25) {
+		} else if (index === 24) {
 			var submitRaisedButton = $('<button type="button" name="'+index+'" id="nextCategoryButton">').addClass("start- mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent").text("Submit").click(this.handleCategory);
 			$("#reviewPicks").append(submitRaisedButton);
 			// document.getElementById("nextCategoryButton").setAttribute("disabled", true);
@@ -98,7 +98,7 @@ class Category {
 
 	submitAnswers() {
 		var confidenceArray = $("ul#sortable").sortable("toArray");
-		var confidenceScore = 24;
+		var confidenceScore = 23;
 
 		for(var confidenceIndex = 0; confidenceIndex < confidenceArray.length; confidenceIndex++) {
 			statuetteGame.playerPicks[confidenceArray[confidenceIndex]] = confidenceScore;
