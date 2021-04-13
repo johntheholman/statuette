@@ -175,7 +175,7 @@ class Game_template {
     sendPicks() {
         var recursiveEncoded = $.param( this.playerPicks );
         $.ajax({
-            url: "https://script.google.com/macros/s/AKfycbyhmKcIxdk3g18ZoENo0wMYQQPNwDEcPSWD9iCJMxUNdMGxI6Z90s0Xnt8I1J7YHCpm/exec",
+            url: "https://script.google.com/macros/s/AKfycby0W8PhFoQAYUchOZB-g-rv4M9EtscbUIwgqh6hJ5pcejP7Gw0QROLUIXC6qAi90LAr/exec",
             type: "post",
             data: recursiveEncoded,
             success: this.finalScreen(),
