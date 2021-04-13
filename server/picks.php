@@ -38,9 +38,9 @@ $mail->addBCC('johntheholman@gmail.com');
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Oscar Picks for 2020 | johntheholman.com';
+$mail->Subject = 'Oscar Picks for 2021 | johntheholman.com';
 $mail->Body    = 'Hello '.$playerPicks['name'].',<br>'.
-                    '<br>'.'Here is a copy of your picks for the 2020 Oscars: <br>'.
+                    '<br>'.'Here is a copy of your picks for the 2021 Oscars: <br>'.
                     '<br>'.
                     'Best Picture: '.$playerPicks['best-picture'].' with a confidence of '.$playerPicks['best-picture-confidence'].'<br>'.
                     'Actor in a Leading Role: '.$playerPicks['actor-in-a-leading-role'].' with a confidence of '.$playerPicks['actor-in-a-leading-role-confidence'].'<br>'.
@@ -61,8 +61,7 @@ $mail->Body    = 'Hello '.$playerPicks['name'].',<br>'.
                     'Production Design: '.$playerPicks['production-design'].' with a confidence of '.$playerPicks['production-design-confidence'].'<br>'.
                     'Short Film (Animated): '.$playerPicks['short-film-animated'].' with a confidence of '.$playerPicks['short-film-animated-confidence'].'<br>'.
                     'Short Film (Live Action): '.$playerPicks['short-film-live-action'].' with a confidence of '.$playerPicks['short-film-live-action-confidence'].'<br>'.
-                    'Sound Editing: '.$playerPicks['sound-editing'].' with a confidence of '.$playerPicks['sound-editing-confidence'].'<br>'.
-                    'Sound Mixing: '.$playerPicks['sound-mixing'].' with a confidence of '.$playerPicks['sound-mixing-confidence'].'<br>'.
+                    'Sound Editing: '.$playerPicks['sound'].' with a confidence of '.$playerPicks['sound-confidence'].'<br>'.
                     'Visual Effects: '.$playerPicks['visual-effects'].' with a confidence of '.$playerPicks['visual-effects-confidence'].'<br>'.
                     'Writing (Adapted Screenplay): '.$playerPicks['writing-adapted-screenplay'].' with a confidence of '.$playerPicks['writing-adapted-screenplay-confidence'].'<br>'.
                     'Writing (Original Screenplay): '.$playerPicks['writing-original-screenplay'].' with a confidence of '.$playerPicks['writing-original-screenplay-confidence'].'<br>'.
