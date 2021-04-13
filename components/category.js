@@ -45,7 +45,6 @@ class Category {
 			nominees.getNominees();
 	        this.footerButton(index);
 	    }
-		$(window).scrollTop(0);
 	}
 
 	footerButton(index){
