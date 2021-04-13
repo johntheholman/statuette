@@ -54,7 +54,7 @@ $mail->Body    = 'Hello '.$playerPicks['name'].',<br>'.
                     'Documentary (Feature): '.$playerPicks['documentary-feature'].' with a confidence of '.$playerPicks['documentary-feature-confidence'].'<br>'.
                     'Documentary (Short Subject): '.$playerPicks['documentary-short'].' with a confidence of '.$playerPicks['documentary-short-confidence'].'<br>'.
                     'Film Editing: '.$playerPicks['film-editing'].' with a confidence of '.$playerPicks['film-editing-confidence'].'<br>'.
-                    'Foreign Language Film: '.$playerPicks['foreign-language-film'].' with a confidence of '.$playerPicks['foreign-language-film-confidence'].'<br>'.
+                    'Foreign Language Film: '.$playerPicks['international-feature-film-film'].' with a confidence of '.$playerPicks['international-feature-film-confidence'].'<br>'.
                     'Makeup and Hairstyling: '.$playerPicks['makeup-and-hairstyling'].' with a confidence of '.$playerPicks['makeup-and-hairstyling-confidence'].'<br>'.
                     'Music (Original Score): '.$playerPicks['music-original-score'].' with a confidence of '.$playerPicks['music-original-score-confidence'].'<br>'.
                     'Music (Original Song): '.$playerPicks['music-original-song'].' with a confidence of '.$playerPicks['music-original-song-confidence'].'<br>'.
