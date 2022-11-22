@@ -162,7 +162,7 @@ const HomePage = () => {
                   </div>
 
                   <Link
-                    to="#"
+                    to="/category/actor-in-a-leading-role"
                     className="inline-block rounded-md border border-transparent bg-red-500 py-3 px-8 text-center font-medium text-white hover:bg-red-700"
                   >
                     Get Started
@@ -226,7 +226,7 @@ const HomePage = () => {
               <div className="mt-8 flex justify-center">
                 <div className="inline-flex rounded-md shadow">
                   <Link
-                    to="/#how-to-play"
+                    to="/category/actor-in-a-leading-role"
                     className="inline-flex items-center justify-center rounded-md border border-transparent bg-red-500 px-5 py-3 text-base font-medium text-white hover:bg-red-700"
                   >
                     Get started

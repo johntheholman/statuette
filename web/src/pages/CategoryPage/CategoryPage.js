@@ -56,6 +56,8 @@ const nominations = {
         name: 'Belfast',
         role: 'Laura Berwick, Kenneth Branagh, Becca Kovacik and Tamar Thomas, Producers',
         imageUrl: '/images/belfast.jpg',
+        backgroundImage:
+          'https://www.themoviedb.org/t/p/original/4KLlHifB1kgMtWl3YnY8JinOj65.jpg',
         synopsis:
           'Buddy is a young boy on the cusp of adolescence, whose life is filled with familial love, childhood hijinks, and a blossoming romance. Yet, with his beloved hometown caught up in increasing turmoil, his family faces a momentous choice: hope the conflict will pass or leave everything they know behind for a new life.',
         href: '/nominee/belfast',
@@ -63,6 +65,7 @@ const nominations = {
         releaseDate: '2021-11-12',
         mpaRating: 'PG-13',
         runtime: '1h 38m',
+        boxoffice: '$49,225,145',
         tmdb: '777270',
       },
       {
@@ -391,10 +394,10 @@ const CategoryPage = ({ category }) => {
                         alt=""
                       />
                     </div>
-                    <div className="flex flex-col justify-between divide-y divide-gray-200 pt-6 pr-6 sm:col-span-2 lg:pt-3 xl:pt-6">
-                      <div className="space-y-2 lg:space-y-1 xl:space-y-2">
+                    <div className="flex flex-col justify-between divide-y divide-gray-200 sm:col-span-2 md:pt-6 lg:pt-3 xl:pt-6">
+                      <div className="space-y-2 py-4 px-4 sm:pl-0 lg:space-y-1 xl:space-y-2">
                         <div className="space-y-1 leading-6">
-                          <h3 className="text-xl font-bold text-red-400">
+                          <h3 className="text-xl font-bold text-red-500">
                             {entity.name}
                           </h3>
                           <p className="text-sm font-medium text-gray-600 lg:hidden xl:block">

@@ -6,13 +6,13 @@ import {
 import { Link } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
-const people = [
+const nominees = [
   {
     name: 'Belfast',
     title: 'Feature',
-    nominations: '6 nominations',
+    nominations: '7 nominations',
     nominate: 'janecooper@example.com',
-    details: '+1-202-555-0170',
+    href: '/nominee/belfast',
     imageUrl: 'images/belfast.jpg',
   },
   {
@@ -114,27 +114,27 @@ const NomineesPage = () => {
 
       <div className="bg-yellow-400 py-8 px-5">
         <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {people.map((person) => (
+          {nominees.map((entity) => (
             <li
-              key={person.nominate}
+              key={entity.nominate}
               className="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow"
             >
               <div className="flex flex-1 flex-col p-8">
                 <img
-                  className="mx-auto h-32 w-32 flex-shrink-0 rounded-full"
-                  src={person.imageUrl}
+                  className="aspect-w-3 aspect-h-2 mx-auto w-28 flex-shrink-0 rounded-lg"
+                  src={entity.imageUrl}
                   alt=""
                 />
                 <h3 className="mt-6 text-sm font-medium text-gray-900">
-                  {person.name}
+                  {entity.name}
                 </h3>
                 <dl className="mt-1 flex flex-grow flex-col justify-between">
                   <dt className="sr-only">Title</dt>
-                  <dd className="text-sm text-gray-500">{person.title}</dd>
+                  <dd className="text-sm text-gray-500">{entity.title}</dd>
                   <dt className="sr-only">Nominations</dt>
                   <dd className="mt-3">
                     <span className="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">
-                      {person.nominations}
+                      {entity.nominations}
                     </span>
                   </dd>
                 </dl>
@@ -143,7 +143,7 @@ const NomineesPage = () => {
                 <div className="-mt-px flex divide-x divide-gray-200">
                   <div className="flex w-0 flex-1">
                     <Link
-                      to={`mailto:${person.nominate}`}
+                      to={entity.nominate}
                       className="relative -mr-px inline-flex w-0 flex-1 items-center justify-center rounded-bl-lg border border-transparent py-4 text-sm font-medium text-gray-700 hover:text-gray-500"
                     >
                       <PlusCircleIcon
@@ -155,7 +155,7 @@ const NomineesPage = () => {
                   </div>
                   <div className="-ml-px flex w-0 flex-1">
                     <Link
-                      to={`tel:${person.details}`}
+                      to={entity.href}
                       className="relative inline-flex w-0 flex-1 items-center justify-center rounded-br-lg border border-transparent py-4 text-sm font-medium text-gray-700 hover:text-gray-500"
                     >
                       <InformationCircleIcon
