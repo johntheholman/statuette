@@ -1,24 +1,3 @@
-/*
-  This example requires some changes to your config:
-
-  ```
-  // tailwind.config.js
-  const colors = require('tailwindcss/colors')
-
-  module.exports = {
-    // ...
-    theme: {
-      extend: {
-        colors: {
-          sky: colors.sky,
-          teal: colors.teal,
-          rose: colors.rose,
-        },
-      },
-    },
-  }
-  ```
-*/
 import {
   CheckIcon,
   ComputerDesktopIcon,
@@ -48,7 +27,7 @@ const awardsCategories = [
     title: 'Actor in a Leading Role',
     description:
       'Awarded to acknowledge the caliber of an actor who has delivered an outstanding performance as the lead character in a film.',
-    href: '#',
+    href: '/category/actor-in-a-leading-role',
     icon: UserIcon,
     iconForeground: 'text-yellow-700',
     iconBackground: 'bg-yellow-50',
@@ -57,7 +36,7 @@ const awardsCategories = [
     title: 'Actor in a Supporting Role',
     description:
       'In a film, there is a character that, though not in the lead, equally bears the responsibility of a film. This award is given to those talented artists who play the supporting role.',
-    href: '#',
+    href: '/category/actor-in-a-supporting-role',
     icon: UsersIcon,
     iconForeground: 'text-yellow-700',
     iconBackground: 'bg-yellow-50',
@@ -66,7 +45,7 @@ const awardsCategories = [
     title: 'Actress in a Leading Role',
     description:
       'Awarded to acknowledge the caliber of an actress who has delivered an outstanding performance as the lead character in a film.',
-    href: '#',
+    href: '/category/actress-in-a-eading-role',
     icon: UserIcon,
     iconForeground: 'text-yellow-700',
     iconBackground: 'bg-yellow-50',
@@ -75,7 +54,7 @@ const awardsCategories = [
     title: 'Actress in a Supporting Role',
     description:
       'In a film, there is a character that, though not in the lead, equally bears the responsibility of a film. This award is given to those talented artists who play the supporting role.',
-    href: '#',
+    href: '/category/actress-in-a-supporting-role',
     icon: UsersIcon,
     iconForeground: 'text-yellow-700',
     iconBackground: 'bg-yellow-50',
@@ -84,8 +63,17 @@ const awardsCategories = [
     title: 'Animated Feature Film',
     description:
       'Awarded for the best collaborative efforts of an animated feature film between the producer(s), director(s), actor(s), writer(s), animator(s) and lots of other artists.',
-    href: '#',
+    href: '/category/animated-feature-film',
     icon: ComputerDesktopIcon,
+    iconForeground: 'text-red-700',
+    iconBackground: 'bg-red-50',
+  },
+  {
+    title: 'Best Picture',
+    description:
+      'Awarded to the producers, the Best Picture statuette is awarded for the best collaborative efforts of the producer(s), director(s), actor(s), writer(s) and lots of other artists.',
+    href: '/category/best-picture',
+    icon: TrophyIcon,
     iconForeground: 'text-red-700',
     iconBackground: 'bg-red-50',
   },
@@ -93,7 +81,7 @@ const awardsCategories = [
     title: 'Cinematography',
     description:
       'Awarded to a cinematographer for his/her achievement in camera angles, movement, and tone captured through the camera for a particular motion picture.',
-    href: '#',
+    href: '/category/cinematography',
     icon: VideoCameraIcon,
     iconForeground: 'text-yellow-700',
     iconBackground: 'bg-yellow-50',
@@ -102,7 +90,7 @@ const awardsCategories = [
     title: 'Costume Design',
     description:
       'Awarded to the designer that prepares the attire of an individual, which adds to the character portrayed by the actor/actress (and extras) in a film.',
-    href: '#',
+    href: '/category/costume-design',
     icon: ShoppingBagIcon,
     iconForeground: 'text-yellow-700',
     iconBackground: 'bg-yellow-50',
@@ -111,7 +99,7 @@ const awardsCategories = [
     title: 'Directing',
     description:
       'Awarded to the director who has shown outstanding achievement in creating a singular vision of a particular film.',
-    href: '#',
+    href: '/category/directing',
     icon: MegaphoneIcon,
     iconForeground: 'text-yellow-700',
     iconBackground: 'bg-yellow-50',
@@ -120,7 +108,7 @@ const awardsCategories = [
     title: 'Documentary (Feature)',
     description:
       'Awarded to the documentary filmmakers that tell a real life story through various means.',
-    href: '#',
+    href: '/category/documentary-feature',
     icon: FilmIcon,
     iconForeground: 'text-red-700',
     iconBackground: 'bg-red-50',
@@ -129,7 +117,7 @@ const awardsCategories = [
     title: 'Documentary (Short Subject)',
     description:
       'Awarded to the short documentary (less than 40 minutes) filmmakers that tell a real life story through various means.',
-    href: '#',
+    href: '/category/documentary-short-subject',
     icon: FilmIcon,
     iconForeground: 'text-red-700',
     iconBackground: 'bg-red-50',
@@ -138,7 +126,7 @@ const awardsCategories = [
     title: 'Film Editing',
     description:
       'Awarded to the editor that is able to put shots together in a particular sequence in order to convey story and emotion from what was captured by the camera.',
-    href: '#',
+    href: '/category/film-editing',
     icon: ScissorsIcon,
     iconForeground: 'text-yellow-700',
     iconBackground: 'bg-yellow-50',
@@ -147,7 +135,7 @@ const awardsCategories = [
     title: 'International Feature Film',
     description:
       'Awarded for the best film that is produced outside of the United States and is submitted in representation of a particular country.',
-    href: '#',
+    href: '/category/international-feature-film',
     icon: GlobeEuropeAfricaIcon,
     iconForeground: 'text-red-700',
     iconBackground: 'bg-red-50',
@@ -156,7 +144,7 @@ const awardsCategories = [
     title: 'Makeup and Hairstyling',
     description:
       'Awarded to those individuals who have the artistic flair to make an actor look like his/her character to perfection. This sometimes involves prothetics.',
-    href: '#',
+    href: '/category/makeup-and-hairstyling',
     icon: PaintBrushIcon,
     iconForeground: 'text-yellow-700',
     iconBackground: 'bg-yellow-50',
@@ -165,7 +153,7 @@ const awardsCategories = [
     title: 'Music (Original Score)',
     description:
       'Awarded to the composer that has written the best underscore or body of music, written specifically for the motion picture.',
-    href: '#',
+    href: '/category/music-original-score',
     icon: MusicalNoteIcon,
     iconForeground: 'text-red-700',
     iconBackground: 'bg-red-50',
@@ -174,17 +162,8 @@ const awardsCategories = [
     title: 'Music (Original Song)',
     description:
       'Awarded to the music composer and lyricists that compose an original song specifically for a given motion picture.',
-    href: '#',
+    href: '/category/music-original-song',
     icon: MusicalNoteIcon,
-    iconForeground: 'text-red-700',
-    iconBackground: 'bg-red-50',
-  },
-  {
-    title: 'Best Picture',
-    description:
-      'Awarded to the producers, the Best Picture statuette is awarded for the best collaborative efforts of the producer(s), director(s), actor(s), writer(s) and lots of other artists.',
-    href: '#',
-    icon: TrophyIcon,
     iconForeground: 'text-red-700',
     iconBackground: 'bg-red-50',
   },
@@ -192,7 +171,7 @@ const awardsCategories = [
     title: 'Production Design',
     description:
       'Awarded to the designers that build the world the characters live in. This could be given for the use of existing locations as well as fabricated sets.',
-    href: '#',
+    href: '/category/production-design',
     icon: SwatchIcon,
     iconForeground: 'text-yellow-700',
     iconBackground: 'bg-yellow-50',
@@ -201,7 +180,7 @@ const awardsCategories = [
     title: 'Short Film (Animated)',
     description:
       'Awarded for the best collaborative efforts of an animated short film (less than 40 mins) between all the artists involved.',
-    href: '#',
+    href: '/category/short-film-animated',
     icon: ComputerDesktopIcon,
     iconForeground: 'text-red-700',
     iconBackground: 'bg-red-50',
@@ -210,7 +189,7 @@ const awardsCategories = [
     title: 'Short Film (Live Action)',
     description:
       'Awarded for the best collaborative efforts of a short film (less than 40 mins) between all the artists involved.',
-    href: '#',
+    href: '/category/short-film-live-action',
     icon: FilmIcon,
     iconForeground: 'text-red-700',
     iconBackground: 'bg-red-50',
@@ -219,7 +198,7 @@ const awardsCategories = [
     title: 'Sound',
     description:
       'Awarded to the sound engineers that create the actual sounds that you hear when something explodes or when you hear the footsteps of an actor/actress. Awarded the sound mixers and engineers that are able to add all of the sound effects, dialogue, and music together without making one aspect too noticable.',
-    href: '#',
+    href: '/category/sound',
     icon: MicrophoneIcon,
     iconForeground: 'text-yellow-700',
     iconBackground: 'bg-yellow-50',
@@ -228,7 +207,7 @@ const awardsCategories = [
     title: 'Visual Effects',
     description:
       'Awarded for the best execution of visual effects by seemlessly integrating them into a motion picture.',
-    href: '#',
+    href: '/category/visual-effects',
     icon: SparklesIcon,
     iconForeground: 'text-red-700',
     iconBackground: 'bg-red-50',
@@ -237,7 +216,7 @@ const awardsCategories = [
     title: 'Writing (Adapted Screenplay)',
     description:
       'Award to the writer or writers who have adapted the story from a different medium (another film, novel, play, or short story) into a film.',
-    href: '#',
+    href: '/category/writing-adapted-screenplay',
     icon: PencilSquareIcon,
     iconForeground: 'text-yellow-700',
     iconBackground: 'bg-yellow-50',
@@ -246,7 +225,7 @@ const awardsCategories = [
     title: 'Writing (Original Screenplay)',
     description:
       'Awarded to the writers that created a story not based upon previously published material.',
-    href: '#',
+    href: '/category/writing-original-screenplay',
     icon: PencilIcon,
     iconForeground: 'text-yellow-700',
     iconBackground: 'bg-yellow-50',
