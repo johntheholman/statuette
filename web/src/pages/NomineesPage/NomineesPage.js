@@ -1,188 +1,91 @@
-import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/20/solid'
+import {
+  InformationCircleIcon,
+  PlusCircleIcon,
+} from '@heroicons/react/24/outline'
 
 import { Link } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
-const people = [
+const nominees = [
   {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
+    name: 'Belfast',
+    title: 'Feature',
+    nominations: '7 nominations',
+    nominate: 'janecooper@example.com',
+    href: '/nominee/belfast',
+    imageUrl: 'images/belfast.jpg',
   },
   {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
+    name: 'CODA',
+    title: 'Feature',
+    nominations: 'Admin',
+    nominate: 'janecooper@example.com',
+    details: '+1-202-555-0170',
+    imageUrl: 'images/coda.jpg',
   },
   {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
+    name: `Don't Look Up`,
+    title: 'Feature',
+    nominations: 'Admin',
+    nominate: 'janecooper@example.com',
+    details: '+1-202-555-0170',
+    imageUrl: 'images/dontLookUp.jpg',
   },
   {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
+    name: 'Drive My Car',
+    title: 'Feature',
+    nominations: 'Admin',
+    nominate: 'janecooper@example.com',
+    details: '+1-202-555-0170',
+    imageUrl: 'images/driveMyCar.jpg',
   },
   {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
+    name: 'Dune',
+    title: 'Feature',
+    nominations: 'Admin',
+    nominate: 'janecooper@example.com',
+    details: '+1-202-555-0170',
+    imageUrl: 'images/dune.jpg',
   },
   {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
+    name: 'King Richard',
+    title: 'Feature',
+    nominations: 'Admin',
+    nominate: 'janecooper@example.com',
+    details: '+1-202-555-0170',
+    imageUrl: 'images/kingRichard.jpg',
   },
   {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
+    name: 'Licorice Pizza',
+    title: 'Feature',
+    nominations: 'Admin',
+    nominate: 'janecooper@example.com',
+    details: '+1-202-555-0170',
+    imageUrl: 'images/licoricePizza.jpg',
   },
   {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
+    name: 'Nightmare Alley',
+    title: 'Feature',
+    nominations: 'Admin',
+    nominate: 'janecooper@example.com',
+    details: '+1-202-555-0170',
+    imageUrl: 'images/nightmareAlley.jpg',
   },
   {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
+    name: 'The Power of the Dog',
+    title: 'Feature',
+    nominations: 'Admin',
+    nominate: 'janecooper@example.com',
+    details: '+1-202-555-0170',
+    imageUrl: 'images/thePowerOfTheDog.jpg',
   },
   {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-  },
-  {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-  },
-  {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-  },
-  {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-  },
-  {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-  },
-  {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-  },
-  {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-  },
-  {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-  },
-  {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-  },
-  {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
-  },
-  {
-    name: 'Jane Cooper',
-    title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
+    name: 'West Side Story',
+    title: 'Feature',
+    nominations: 'Admin',
+    nominate: 'janecooper@example.com',
+    details: '+1-202-555-0170',
+    imageUrl: 'images/westSideStory.jpg',
   },
 ]
 
@@ -211,27 +114,27 @@ const NomineesPage = () => {
 
       <div className="bg-yellow-400 py-8 px-5">
         <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {people.map((person) => (
+          {nominees.map((entity) => (
             <li
-              key={person.email}
+              key={entity.nominate}
               className="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow"
             >
               <div className="flex flex-1 flex-col p-8">
                 <img
-                  className="mx-auto h-32 w-32 flex-shrink-0 rounded-full"
-                  src={person.imageUrl}
+                  className="aspect-w-3 aspect-h-2 mx-auto w-28 flex-shrink-0 rounded-lg"
+                  src={entity.imageUrl}
                   alt=""
                 />
                 <h3 className="mt-6 text-sm font-medium text-gray-900">
-                  {person.name}
+                  {entity.name}
                 </h3>
                 <dl className="mt-1 flex flex-grow flex-col justify-between">
                   <dt className="sr-only">Title</dt>
-                  <dd className="text-sm text-gray-500">{person.title}</dd>
-                  <dt className="sr-only">Role</dt>
+                  <dd className="text-sm text-gray-500">{entity.title}</dd>
+                  <dt className="sr-only">Nominations</dt>
                   <dd className="mt-3">
                     <span className="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">
-                      {person.role}
+                      {entity.nominations}
                     </span>
                   </dd>
                 </dl>
@@ -240,26 +143,26 @@ const NomineesPage = () => {
                 <div className="-mt-px flex divide-x divide-gray-200">
                   <div className="flex w-0 flex-1">
                     <Link
-                      to={`mailto:${person.email}`}
+                      to={entity.nominate}
                       className="relative -mr-px inline-flex w-0 flex-1 items-center justify-center rounded-bl-lg border border-transparent py-4 text-sm font-medium text-gray-700 hover:text-gray-500"
                     >
-                      <EnvelopeIcon
+                      <PlusCircleIcon
                         className="h-5 w-5 text-gray-400"
                         aria-hidden="true"
                       />
-                      <span className="ml-3">Email</span>
+                      <span className="ml-3">Nominate</span>
                     </Link>
                   </div>
                   <div className="-ml-px flex w-0 flex-1">
                     <Link
-                      to={`tel:${person.telephone}`}
+                      to={entity.href}
                       className="relative inline-flex w-0 flex-1 items-center justify-center rounded-br-lg border border-transparent py-4 text-sm font-medium text-gray-700 hover:text-gray-500"
                     >
-                      <PhoneIcon
+                      <InformationCircleIcon
                         className="h-5 w-5 text-gray-400"
                         aria-hidden="true"
                       />
-                      <span className="ml-3">Call</span>
+                      <span className="ml-3">Details</span>
                     </Link>
                   </div>
                 </div>

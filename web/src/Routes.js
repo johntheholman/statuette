@@ -10,10 +10,18 @@
 import { Router, Route, Set } from '@redwoodjs/router'
 
 import BasicLayout from 'src/layouts/BasicLayout'
+import CategoryLayout from 'src/layouts/CategoryLayout'
+import NomineeLayout from 'src/layouts/NomineeLayout'
 
 const Routes = () => {
   return (
     <Router>
+      <Set wrap={CategoryLayout}>
+        <Route path="/category/{category}" page={CategoryPage} name="category" />
+      </Set>
+      <Set wrap={NomineeLayout}>
+        <Route path="/nominee/{title}" page={NomineePage} name="nominee" />
+      </Set>
       <Set wrap={BasicLayout}>
         <Route path="/review" page={ReviewPage} name="review" />
         <Route path="/nominees" page={NomineesPage} name="nominees" />
